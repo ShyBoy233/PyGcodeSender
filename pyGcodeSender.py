@@ -70,7 +70,7 @@ def main():
                 sys.exit()
 
     # Start of the program.
-    print('='*100)
+    print('='*150)
     print("Welcome to use this simple python script to send gcode file using serial.")
     print()
 
@@ -119,7 +119,7 @@ def main():
     time.sleep(1)
     s.reset_input_buffer()
 
-    tqdm4codes = tqdm(codes, bar_format='{l_bar}{bar:10}{r_bar}{bar:-10b}', unit=" codes", ncols=100)
+    tqdm4codes = tqdm(codes, bar_format='{l_bar}{bar:10}{r_bar}{bar:-10b}', unit=" codes", ncols=150)
     for code in tqdm4codes:
         tqdm4codes.set_postfix(gcode=code) # Show gcode at postfix
         if code.strip().startswith(';') or code.isspace() or len(code) <=0:
@@ -137,7 +137,7 @@ def main():
     # End of the program.
     print()
     print("Welcome to use this simple script again. Best wishes.")
-    print('='*100)
+    print('='*150)
 
 
 if __name__ =="__main__":
