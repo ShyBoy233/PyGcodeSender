@@ -59,7 +59,8 @@ Welcome to use this simple script again. Best wishes.
 
 # 3. Notes
 1. <font size=5>Caution:</font> **When you use this script for the first time in a new environment, please always monitor the running status of your machine to avoid unexpected situations.**
-2. Baud rate of host computer and microcontroller must be same. If baud rates are different, no error will be thrown. However, the machine will not work and the program stay stuck. The next situation is an instance.
+2. When the script is running, single click on the terminal console will suspend the sending process. Press "Enter" key to continue.
+3. Baud rate of host computer and microcontroller must be same. If baud rates are different, no error will be thrown. However, the machine will not work and the program stay stuck. The next situation is an instance.
 ```console
 PS C:\Users\Administrator\Desktop> python .\pyGcodeSender.py .\CFFFP_toothless.gcode -b 9600
 ========================================================================================================================
@@ -80,7 +81,7 @@ Port COM4 has been successfully connected.
 Sending codes.
   0%|          | 0/233098 [00:00<?, ? codes/s, gcode=M140 S60]
 ```
-3. When you use this script to send gcode to a 3D printer, the program will be stuck in the process of hot bed and nozzle heating (M140 and M104 seperately) like the situation below. Just wait until the temperature increased to specified value patiently.
+4. When you use this script to send gcode to a 3D printer, the program will be stuck in the process of hot bed and nozzle heating (M140 and M104 seperately) like the situation below. Just wait until the temperature increased to specified value patiently.
 ```console
 PS C:\Users\Administrator\Desktop> python .\pyGcodeSender.py .\CFFFP_toothless.gcode -b 250000
 ========================================================================================================================
@@ -101,4 +102,4 @@ Port COM4 has been successfully connected.
 Sending codes.
   0%|          | 0/233098 [00:00<?, ? codes/s, gcode=M190 S60]
 ```
-4. Basic idea taken from https://github.com/grbl/grbl
+5. Basic idea taken from https://github.com/grbl/grbl
